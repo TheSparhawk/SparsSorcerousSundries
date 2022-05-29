@@ -7,8 +7,6 @@ This mod was made with blood, sweat and a whole lot of crying.
 
 This mod requires this fantastic mod to function: [TabletopTweaks-Core](https://github.com/Vek17/TabletopTweaks-Core/releases).
 
-This module provides tabletop based fixes and new content to Wrath of the Righteous.
-
 Once a game is saved with this mod is enabled it will require this mod to be present to load, so do not remove or disable the mod once enabled.
 Items and enemies may depend on this mod after it is loaded into a save and could break if it was removed.
 
