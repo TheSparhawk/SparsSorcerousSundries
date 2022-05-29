@@ -27,6 +27,8 @@ The purpose of this mod is to help address the veriaty of magic items that are a
 The main goal is to not only add new items but also address the lack of special named versions of specific item types. As development goes on
 the amount will increase. Feel free to voice any ideas you may have or item categories you feel may need some more love.
 
+Current Item List:[List](https://github.com/TheSparhawk/SparsSorcerousSundries/wiki)
+
 ## Features
 * Kingmaker Items added to Game
   * Many of the Kingmaker Items that were present in the gamefiles are now available throughout the game for sale.
