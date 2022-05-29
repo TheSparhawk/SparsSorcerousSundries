@@ -1,0 +1,42 @@
+﻿{
+  "NewSettingsOffByDefault": false,
+  "VendorCostMultiplier": 0,
+  "KingmakerItems": {
+    "DisableAll": false,
+    "Settings": {
+      "KingmakerVendorItems": {
+        "Enabled": true,
+        "Homebrew": false,
+        "Description": "Adds Kingmaker items to various vendors throughout the acts."
+      }
+    },
+    "IsExpanded": true
+  },
+  "CustomItems": {
+    "DisableAll": false,
+    "Settings": {
+      "CustomVendorItems": {
+        "Enabled": true,
+        "Homebrew": false,
+        "Description": "Adds custom items to various vendors throughout the acts."
+      },
+      "CustomLootItems": {
+        "Enabled": true,
+        "Homebrew": false,
+        "Description": "Adds custom items to various vendors throughout the acts."
+      }
+    },
+    "IsExpanded": true
+  },
+  "GilmoresGoods": {
+    "DisableAll": false,
+    "Settings": {
+      "EnableGilmoresStore": {
+        "Enabled": true,
+        "Homebrew": false,
+        "Description": "Adds a new vendor to act 4 selling various powerfull artifacts.WIP Currently Heraxa"
+      }
+    },
+    "IsExpanded": true
+  }
+}

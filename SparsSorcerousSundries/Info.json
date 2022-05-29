@@ -1,0 +1,11 @@
+﻿{
+  "Id": "SparsSorcerousSundries",
+  "DisplayName": "Spars Sorcerous Sundries",
+  "Author": "Sparhawk87",
+  "Version": "1.0.0",
+  "ManagerVersion": "0.23.0",
+  "AssemblyName": "SparsSorcerousSundries.dll",
+  "EntryMethod": "SparsSorcerousSundries.Main.Load",
+  "Requirements": [ "TabletopTweaks-Core" ],
+  "LoadAfter": [ "TabletopTweaks-Core" ]
+}
