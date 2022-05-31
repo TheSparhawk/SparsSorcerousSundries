@@ -2,7 +2,7 @@
   "Id": "SparsSorcerousSundries",
   "DisplayName": "Spars Sorcerous Sundries",
   "Author": "Sparhawk87",
-  "Version": "1.0.0",
+  "Version": "1.0.1",
   "ManagerVersion": "0.23.0",
   "AssemblyName": "SparsSorcerousSundries.dll",
   "EntryMethod": "SparsSorcerousSundries.Main.Load",
