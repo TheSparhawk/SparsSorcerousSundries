@@ -5,7 +5,7 @@ namespace SparsSorcerousSundries.Config
     public class AddedContent : IUpdatableSettings
     {
         public bool NewSettingsOffByDefault = false;
-        public float vendorCostMultiplier = 0f;
+        public float vendorCostMultiplier = 1f;
         //public SettingGroup RacialArchetypes = new SettingGroup();  As Example
         public SettingGroup KingmakerItems = new SettingGroup();
         public SettingGroup CustomItems = new SettingGroup();

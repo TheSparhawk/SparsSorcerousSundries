@@ -81,7 +81,7 @@ namespace SparsSorcerousSundries.Items.CustomItems
                 .SetFlavorText(Helpers.CreateString(SSSContext, "PrismBladeFT", "Few beings have seen the like of this bastardsword. The blade is made of colored light, continuously shimmering and changing chaotically,  hues spilling and racing after each other."))
                 .SetType("d2fe2c5516b56f04da1d5ea51ae3ddfe")
                 .SetIcon(Icon_PrismaticBlade)
-                .SetCost(130000)
+                .SetCost(230000)
                 .SetOverrideDamageDice(true)
                 .SetDamageDice(new DiceFormula(2, DiceType.D10))
                 .SetOverrideDamageType(true)
