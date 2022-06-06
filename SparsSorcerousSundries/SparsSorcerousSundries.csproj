@@ -137,16 +137,48 @@
       <HintPath>G:\Program Files\Steam\steamapps\common\Pathfinder Second Adventure\Mods\TabletopTweaks-Core\TabletopTweaks-Core.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="UniRx">
+      <HintPath>..\lib\UniRx.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.TextMeshPro">
+      <HintPath>..\lib\Unity.TextMeshPro.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="UnityEngine">
       <HintPath>G:\Program Files\Steam\steamapps\common\Pathfinder Second Adventure\Wrath_Data\Managed\UnityEngine.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.AnimationModule">
+      <HintPath>..\lib\UnityEngine.AnimationModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.AssetBundleModule">
+      <HintPath>..\lib\UnityEngine.AssetBundleModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.CoreModule">
       <HintPath>G:\Program Files\Steam\steamapps\common\Pathfinder Second Adventure\Wrath_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="UnityEngine.ImageConversionModule">
+      <HintPath>..\lib\UnityEngine.ImageConversionModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="UnityEngine.IMGUIModule">
       <HintPath>G:\Program Files\Steam\steamapps\common\Pathfinder Second Adventure\Wrath_Data\Managed\UnityEngine.IMGUIModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.TextRenderingModule">
+      <HintPath>..\lib\UnityEngine.TextRenderingModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.UI">
+      <HintPath>..\lib\UnityEngine.UI.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.UIModule">
+      <HintPath>..\lib\UnityEngine.UIModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityModManager">
@@ -161,11 +193,17 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Config\AddedContent.cs" />
+    <Compile Include="Items\CustomItems\BookofInfSpells.cs" />
+    <Compile Include="Items\CustomItems\BovineBardiche.cs" />
+    <Compile Include="Items\CustomItems\BubblesBelt.cs" />
     <Compile Include="Items\CustomItems\Catskin.cs" />
     <Compile Include="Items\CustomItems\LightningRod.cs" />
     <Compile Include="Items\CustomItems\PotofEndlessFood.cs" />
     <Compile Include="Items\CustomItems\PrismaticBlade.cs" />
+    <Compile Include="Items\CustomItems\QuiversAnBolts.cs" />
     <Compile Include="Items\CustomItems\RingofEvershield.cs" />
+    <Compile Include="Items\FixedItems\MarchingTerror.cs" />
+    <Compile Include="Items\QuestItems\DrezenRingReward.cs" />
     <Compile Include="Items\Vendors\Gilmore.cs" />
     <Compile Include="Items\ContentManager.cs" />
     <Compile Include="Items\Vendors\ThousandDelightsVendor.cs" />
@@ -180,12 +218,15 @@
     </Compile>
     <Compile Include="Settings.cs" />
     <Compile Include="UMMSettingsUI.cs" />
+    <Compile Include="Utilities\AssetLoader.cs" />
     <Compile Include="Utilities\DialogTools.cs" />
     <Compile Include="Utilities\ExtentionMethods.cs" />
     <Compile Include="Utilities\ItemToolExtensions.cs" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Config\Blueprints.json" />
+    <EmbeddedResource Include="Config\Blueprints.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
     <EmbeddedResource Include="Config\AddedContent.json" />
     <EmbeddedResource Include="Config\Fixes.json" />
     <None Include="app.config" />
@@ -239,7 +280,7 @@
   <ItemGroup>
     <PackageReference Include="ILRepack.MSBuild.Task" Version="2.0.13" />
     <PackageReference Include="WW-Blueprint-Core">
-      <Version>2.0.3</Version>
+      <Version>2.0.4</Version>
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
@@ -260,6 +301,48 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Assets\Items\LongspearAngry.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Assets\Items\NOOBERMed.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Assets\Items\Icon_BookOfInfSpells.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Assets\Items\IceArrowsQuiverItem.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Assets\Items\ColdBoltBag.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Assets\Items\FireBoltBag.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Assets\Items\LightningBoltBag.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Assets\Items\PiercingBoltBag.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Assets\Items\SlayingBoltBag.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Assets\Items\Icon_BoneJavelin.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Assets\Items\LetsPirateS.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
   </ItemGroup>

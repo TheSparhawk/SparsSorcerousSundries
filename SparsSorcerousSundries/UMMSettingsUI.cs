@@ -35,6 +35,7 @@ namespace SparsSorcerousSundries
 
                 SetttingUI.SettingGroup("Kingmaker Items", TabLevel, AddedContent.KingmakerItems);
                 SetttingUI.SettingGroup("Custom Items", TabLevel, AddedContent.CustomItems);
+                SetttingUI.SettingGroup("Quest Rewards", TabLevel, AddedContent.QuestRewards);
                 SetttingUI.SettingGroup("Gilmores Goods", TabLevel, AddedContent.GilmoresGoods);
 
                 //SetttingUI.NestedSettingGroup();

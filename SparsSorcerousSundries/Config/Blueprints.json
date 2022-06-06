@@ -8,7 +8,11 @@
     "PrismaticFluctuation": "B4A030F3-8E96-41A7-AE00-D0FBA84CD423",
     "PrismaticFluctuation2": "D6A71760-1F42-4903-81AC-F266E04D3EE9",
     "BastardSwordPrismaticBlade": "BA0671E5-A9BD-4FAB-85E5-71B3DE369936",
-    "PrismaticBladeEnchant": "13959FB2-530A-4256-B965-1FC238766CEF"
+    "PrismaticBladeEnchant": "13959FB2-530A-4256-B965-1FC238766CEF",
+    "HellfireQuiver": "5ca3486f-9823-4118-80b0-8f9c5dbdf7c3",
+    "IceArrowQuiverAbil": "1f03b8b6-c2c4-4c77-9aa2-ef345deba9c1",
+    "IceArrowQuiverBuff": "a32b2e2b-9db1-4a9b-956a-411353923fd3",
+    "marchingShakenAbility": "f513a0d7-eb06-47d0-a5ba-f57350f23ede"
   },
   "DerivedBlueprintMasters": {},
   "DerivedBlueprints": {},

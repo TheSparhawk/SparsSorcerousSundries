@@ -66,6 +66,9 @@ using SparsSorcerousSundries.Items;
 using SparsSorcerousSundries.Items.CustomItems;
 using SparsSorcerousSundries.Config;
 using BlueprintCore.Blueprints.Configurators.Loot;
+using SparsSorcerousSundries.Items.FixedItems;
+using SparsSorcerousSundries.Utilities;
+using BlueprintCore.Blueprints.Configurators.DialogSystem;
 
 namespace SparsSorcerousSundries.Items
 {
@@ -88,6 +91,7 @@ namespace SparsSorcerousSundries.Items
             { "C1Jorum","a7948df9d37efc34e841284cf883370e" },
             {"C2Scroll","cdd7aa16e900b9146bc6963ca53b8e71" },
             {"C2Woljif","24282bde41338884d840a06987c1b3bf" },
+            {"C3Woljif","3c098c8feea9cc44eadad74b5352ab95" },
             {"C4Gilmore","712c04b716fe41ef962139cd8394b62f" }
         };
        
@@ -144,7 +148,13 @@ namespace SparsSorcerousSundries.Items
             PotofEndlessFood.CreatePotofEndlessFood();
             PrismaticBlade.CreatePrismaticBlade();
             RingofEvershield.CreateRingofEvershield();
+            BookofInfSpells.CreateBookOfInfiniteSpells();
 
+            //QuiverPack
+            QuiversAnBolts.CreateQuiversAnBolts();
+
+            //fixes
+            MarchingTerror.FixMarchingTerror();
 
             //Add the items to the places
             if (SSSContext.AddedContent.KingmakerItems.Settings["KingmakerVendorItems"].Enabled)
@@ -156,6 +166,8 @@ namespace SparsSorcerousSundries.Items
                 LightningRod.AddLightningRod();
                 PrismaticBlade.AddPrismaticBlade();
                 Catskin.AddCatskin();
+                QuiversAnBolts.AddQuiverAnBolts();
+                BookofInfSpells.AddBookOfInfiniteSpells();
             }
 
             if (SSSContext.AddedContent.CustomItems.Settings["CustomLootItems"].Enabled)
@@ -164,11 +176,19 @@ namespace SparsSorcerousSundries.Items
                 PotofEndlessFood.AddPotofFood();
             }
 
+            if (SSSContext.AddedContent.QuestRewards.Settings["EnableNewQuestRewards"].Enabled)
+            {
+                QuestItems.DrezenRingReward.FixGalfreyRewardRing();
+            }
+
             if (SSSContext.AddedContent.GilmoresGoods.Settings["EnableGilmoresStore"].Enabled)
             {
                 Gilmore.SpawnGilmore();
             }
-
+            var noober = ResourcesLibrary.TryGetBlueprint<BlueprintUnit>("cc50a88bbd8dd3e4da066d33d14fdfc8");
+            var nooberpor = ResourcesLibrary.TryGetBlueprint<BlueprintPortrait>("5a7708d879494a61bcd72acac17ecd12");
+            nooberpor.Data.InitiativePortrait = false;
+            HalfPortraitInjecotr.Replacements[noober.PortraitSafe.Data] = AssetLoaderExtensions.LoadInternalPortrait(SSSContext,"Items",file: "NOOBERMed.png", new Vector2Int(332, 432), TextureFormat.BC5);
         }
     }
 
@@ -203,6 +223,28 @@ namespace SparsSorcerousSundries.Items
 
         }
 
+    }
+    [HarmonyPatch(typeof(PortraitData), "get_HalfLengthPortrait")]
+    public static class HalfPortraitInjecotr
+    {
+        public static Dictionary<PortraitData, Sprite> Replacements = new();
+        public static bool Prefix(PortraitData __instance, ref Sprite __result)
+        {
+            if (Replacements.TryGetValue(__instance, out __result))
+                return false;
+            return true;
+        }
+    }
+    [HarmonyPatch(typeof(PortraitData), "get_SmallPortrait")]
+    public static class SmallPortraitInjecotr
+    {
+        public static Dictionary<PortraitData, Sprite> Replacements = new();
+        public static bool Prefix(PortraitData __instance, ref Sprite __result)
+        {
+            if (Replacements.TryGetValue(__instance, out __result))
+                return false;
+            return true;
+        }
     }
 
 

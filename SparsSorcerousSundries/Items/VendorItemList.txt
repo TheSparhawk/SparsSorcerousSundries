@@ -39,6 +39,8 @@ b7e4ce7020d84754a816242520f153cd C3Wilcer 1 15000 NecromancersStaff
 436ec3989c26a3442ab12cb055b2b22f C1Jorum 1 13000 CrimsonCounselor
 3d4ab4a38a6b41c4a941a23fd6a47143 C2Wilcer 1 23000 WilloftheDisciple
 fa02b3d13a6598c4f97acfbabfe1e01e C4Gilmore 1 302000 TwinSerpents
+81310913ee067e14dbb3d35a71f25b14 C4Gilmore 1 252000 SolidStrategy
+04cfe9660005b05438b9ba46ba85e08d C3Arsinoe 1 56000 SigilOfCreation
 # 
 1d9782b28b47cb64ea5e90e093db087b C5Wilcer 1 302000 DeathCrusherplate
 fd54ed3702d98a24283a400bd76c6b03 C4Gilmore 1 220000 AssassinChainshirt

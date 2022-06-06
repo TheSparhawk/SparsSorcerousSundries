@@ -18,6 +18,7 @@ namespace SparsSorcerousSundries
         public bool CustomLootItems = true;
         public bool GilmoresSundries = true;
         public bool CustomEnemyGearItems = true;
+        public bool NewQuestRewards = true;
 
         public override void Save(UnityModManager.ModEntry modEntry)
         {

@@ -28,6 +28,17 @@
     },
     "IsExpanded": true
   },
+  "QuestRewards": {
+    "DisableAll": false,
+    "Settings": {
+      "EnableNewQuestRewards": {
+        "Enabled": true,
+        "Homebrew": false,
+        "Description": "Improves various quest item rewards throughout the acts."
+      }
+    },
+    "IsExpanded": true
+  },
   "GilmoresGoods": {
     "DisableAll": false,
     "Settings": {
