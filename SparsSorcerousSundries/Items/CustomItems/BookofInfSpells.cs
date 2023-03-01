@@ -43,7 +43,7 @@ namespace SparsSorcerousSundries.Items.CustomItems
                 .SetDisplayName(Helpers.CreateString(SSSContext, "SpellBookAbilName", "Shifting Page"))
                 .SetDescription(Helpers.CreateString(SSSContext, "SpellBookAbilDesc", "placeholder"))
                 .SetDescriptionShort(Helpers.CreateString(SSSContext, "SpellBookAbilDescS", "placeholdershort"))
-                .SetAnimationStyle(Kingmaker.View.Animation.CastAnimationStyle.CastActionSelf)
+                //.SetAnimationStyle(Kingmaker.View.Animation.CastAnimationStyle.CastActionSelf)
                 .SetCustomRange(5.Feet())
                 .AllowTargeting(self: true)
                 .SetActionType(Kingmaker.UnitLogic.Commands.Base.UnitCommand.CommandType.Standard)

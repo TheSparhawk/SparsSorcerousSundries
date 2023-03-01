@@ -73,7 +73,7 @@ namespace SparsSorcerousSundries.Items.CustomItems
                  .SetDisplayName(Helpers.CreateString( SSSContext,"PotofFoodAbilName","Rumbling Satisfaction"))
                  .SetDescription(Helpers.CreateString(SSSContext, "PotofFoodAbilDesc", "Once per day you may use this item to grant you party members each a random food buff, doing so removes any current food buff."))
                  .SetDescriptionShort(Helpers.CreateString(SSSContext, "PotofFoodAbilDescS", "Grats a different food buff"))
-                 .SetAnimationStyle( Kingmaker.View.Animation.CastAnimationStyle.CastActionSelf)
+                 //.SetAnimationStyle(Kingmaker.View.Animation.CastAnimationStyle.CastActionSelf)
                  .SetCustomRange(5.Feet())
                  .AllowTargeting(self: true)
                  .SetActionType(Kingmaker.UnitLogic.Commands.Base.UnitCommand.CommandType.Standard)
@@ -85,7 +85,8 @@ namespace SparsSorcerousSundries.Items.CustomItems
                              Action = createFoodBuffPartyAction()
                              .Build()
                          });
-                 }).Configure();
+                 })
+                 .Configure();
 
             var PotofEndlessFoodItem = ItemEquipmentUsableConfigurator.New(itemName, itemGuid)
                 .SetDisplayNameText(Helpers.CreateString(SSSContext, "PotofFoodName", "Pot of Plenty"))
