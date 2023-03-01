@@ -19,6 +19,7 @@ using BlueprintCore.Blueprints.Configurators.Classes;
 using Kingmaker.UnitLogic.Mechanics;
 using SparsSorcerousSundries.NewComponents;
 using Kingmaker.Designers.Mechanics.Facts;
+using BlueprintCore.Blueprints.CustomConfigurators.Classes;
 
 namespace SparsSorcerousSundries.Items.CustomItems
 {

@@ -32,7 +32,7 @@ using Kingmaker.RuleSystem.Rules;
 using Kingmaker.RuleSystem.Rules.Damage;
 using Kingmaker.UI;
 using Kingmaker.UI.Log;
-using Kingmaker.UI.Log.CombatLog_ThreadSystem;
+//using Kingmaker.UI.Log.CombatLog_ThreadSystem;
 using Kingmaker.UnitLogic;
 using Kingmaker.UnitLogic.Abilities;
 using Kingmaker.UnitLogic.Abilities.Blueprints;
